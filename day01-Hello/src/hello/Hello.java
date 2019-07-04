@@ -11,6 +11,13 @@ public class Hello {
 		System.out.println("Hello, World!");
 		
 		// 실행 : ctrl +F11
+		
+		// 자바 기본 출력 구문
+		// sysout -> ctrl + space bar
+		System.out.println("안녕하세요, 자바!");
+		
+		// 소스 편집 후 항상 저장하는 습관
+		// ctrl + s 단축기로 항상 저장
 
 	}
 
