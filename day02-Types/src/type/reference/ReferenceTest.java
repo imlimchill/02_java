@@ -1,4 +1,4 @@
-package type.primitive;
+package type.reference;
 
 /**
  * 기본형 8가지 외의 모든 타입인 참조형 타입을 테스트하는 클래스
