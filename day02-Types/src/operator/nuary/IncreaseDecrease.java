@@ -27,7 +27,7 @@ public class IncreaseDecrease {
 		
 		ten = -ten;
 		System.out.println("ten = " + ten);
-		
+		                                                                                                         
 		ten = +ten; // 동일연산 : 1 * ten > 바꿔는거 없음
 		System.out.println("ten = " + ten);
 		
