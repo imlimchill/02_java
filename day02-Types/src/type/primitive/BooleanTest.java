@@ -1,6 +1,6 @@
 package type.primitive;
 
-/* 논리타입인 boolean 타입을 선언하고
+/** 논리타입인 boolean 타입을 선언하고
  * 테스트하는 클래스
  * 
  * 
