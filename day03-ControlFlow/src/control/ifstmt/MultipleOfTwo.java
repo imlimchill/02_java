@@ -18,6 +18,8 @@ import java.util.Scanner;
  * 2의 배수가 아닐 때 : "입력값 5 은(는) 2의 배수가 아닙니다."
  * 						"나머지가 1입니다."
  * ---------------------------------------------------------------
+ * 추가) 0일 경우 0은 배수 판별할 수 없습니다.
+ * 
  * @author Administrator
  *
  */
@@ -27,7 +29,7 @@ public class MultipleOfTwo {
 		// 선언
 		int input;
 		int mod;
-		String result;
+		String result = null;
 		Scanner scan;
 		
 		// 초기화
@@ -37,13 +39,19 @@ public class MultipleOfTwo {
 		input = scan.nextInt();
 		
 		// 사용
-		if (input % 2 == 0) {
-			result = "2의 배수입니다.";
+		if (input == 0) {
+			System.out.println("0은 배수 판별할 수 없습니다.");
 		} else {
-			result = "2의 배수가 아닙니다.";
+			
+			if (input % 2 == 0) {
+				result = "2의 배수입니다.";
+			} else {
+				result = "2의 배수가 아닙니다.";
+			}
+			
+			// 0이 아닌 경우의 결과 출력
+			System.out.printf("입력값 %d 은(는) %s%n", input, result);
 		}
-		
-		System.out.printf("입력값 %d 은(는) %s%n", input, result);
 		
 		// (2) 나머지 구하기
 		mod = input % 2;
@@ -52,6 +60,6 @@ public class MultipleOfTwo {
 		}
 		
 		scan.close();
-	}
+	} // end main
 
-}
+} // end class
