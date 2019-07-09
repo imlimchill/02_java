@@ -14,8 +14,10 @@ public class SumOfEvens {
 				
 		// 사용
 		while (num <= 100) {
-			sum += num;
-			num += 2;
+			if (num % 2 == 0) {
+				sum += num;
+			}
+			num++;
 		}
 				
 		// 출력
