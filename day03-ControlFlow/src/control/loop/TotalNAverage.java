@@ -24,12 +24,24 @@ public class TotalNAverage {
 		score = scan.nextInt();
 		
 		// total 점수 구하기
-		while (score != 0) {
+//		while (score != 0) {
+//			total += score;
+//			System.out.println("점수를 입력(끝내려면 0 입력) : ");
+//			score = scan.nextInt();
+//			count++;
+//		}
+		
+		do {
+			if(score == 0) {
+				break;
+			}
+			
 			total += score;
 			System.out.println("점수를 입력(끝내려면 0 입력) : ");
 			score = scan.nextInt();
 			count++;
-		}
+		} while (score != 0);
+		
 		
 		// 평균 구하기 및 출력
 		if (count == 0) {
