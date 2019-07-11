@@ -44,6 +44,14 @@ public class ForTest {
 		for (int stage = 1; stage <= 10; stage++) {
 			System.out.printf("%2d x %2d = %3d%n", stage, stage, stage * stage);
 		}
+		System.out.println();
+		
+		// 3. 제곱표 출력(배열, foreach 사용)
+		int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		for (int num : numbers) {
+			System.out.printf("%2d x %2d = %3d%n", num, num, num * num);
+		}
 		
 	} // end main
 
