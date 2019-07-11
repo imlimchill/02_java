@@ -13,14 +13,14 @@ package array.basic;
 public class ArrayAndFor {
 
 	public static void main(String[] args) {
-		// 선언
+		// 1. 선언
 		int[] numbers;
 		int summary = 0;
 		
-		// 초기화
+		// 2. 초기화
 		numbers = new int[10];
 		
-		// 값 저장
+		// 3. 값 저장
 		for(int idx = 0; idx < numbers.length; idx++) {
 			numbers[idx] = (idx + 1) * 10;
 			summary += numbers[idx];
@@ -31,8 +31,20 @@ public class ArrayAndFor {
 //			System.out.printf("numbers[%d] = %d%n", idx, numbers[idx]);
 //		}
 		
-		// 합산 결과 출력
+		// 4. 합산 결과 출력
 		System.out.printf("0 ~ 9번 인덱스의 합 : %d%n", summary);
+		
+		// 5. 새로운 값 저장
+		System.out.println("== 100, 200, ... , 1000 으로 숫자 저장하고 출력하기 ==");
+		for (int idx = 0; idx < numbers.length; idx++) {
+			numbers[idx] = (idx + 1) * 100;
+			summary += numbers[idx];
+		}
+		
+		// 6. foreach 구문으로 출력
+		for (int num : numbers) {
+			System.out.println("num = " + num);
+		}
 	} //end main
 
 } // end class
