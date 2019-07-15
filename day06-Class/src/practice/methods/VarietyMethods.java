@@ -55,8 +55,8 @@ public class VarietyMethods {
 	 * 
 	 */
 	public void birthYearMonth(String name, int year, int month) {
-		System.out.printf("%s 는 %d년 %d월 생입니다.");
-	}
+		System.out.printf("%s 는 %d년 %d월 생입니다.", name, year, month);
+	} //end method
 	
 	/**
 	 * 출력한 단의 숫자를 입력받아
@@ -72,7 +72,7 @@ public class VarietyMethods {
 		for (int idx = 1; idx < 10; idx ++) {
 			System.out.printf("%d x %d = %2d%n", stage, idx, stage * idx);
 		}
-	}
+	} //end method
 	
 	/**
 	 * 출력할 단의 숫자를 가지고 있는 int 배열을 매개변수로 입력받아
@@ -81,14 +81,14 @@ public class VarietyMethods {
 	 * 
 	 * @param stages : int[]
 	 */
-	public void printNineNineTableFremArray(int[] stages) {
+	public void printNineNineTableFromArray(int[] stages) {
 		for(int idx = 0; idx < stages.length; idx++) {
 			System.out.printf("%d 단", stages[idx]);
 			for (int ind = 1; ind < 10; ind++) {
 				System.out.printf("%d X %d = %2d%n", stages[idx], idx, stages[idx] * idx);
 			}
 		}
-	}
+	} //end method
 	
 	/**
 	 * 키(cm) 몸무게(kg) 을 매개 변수로 입력받아
@@ -108,6 +108,24 @@ public class VarietyMethods {
 	 * @param weight : double
 	 * @return String 비만도 판정 문자열
 	 */
+	public String calcBmi(double height, double weight) {
+		double bmi = weight / (height * 100) * (height * 100);
+		String result;
+		if (bmi < 15.0) {
+			result = "병적인 저체중";
+		} else if (bmi < 18.5) {
+			result = "저체중";
+		} else if (bmi < 23.0) {
+			result = "정상";
+		} else if (bmi < 27.5) {
+			result = "과체중";
+		} else if (bmi < 40.0) {
+			result = "비만";
+		} else {
+			result = "병적인 비만";
+		}
+		return result;
+	} //end method
 	
 	/**
 	 * 입력된 두 정수 중에서 작은 수를 찾아 리턴 하는 메소드
@@ -115,8 +133,18 @@ public class VarietyMethods {
 	 * 
 	 * @param input1 : int
 	 * @param input2 : int
-	 * @return int 입력된 두 값 중 잣은 정수
+	 * @return int 입력된 두 값 중 작은 정수
 	 */
+	public int min (int input1, int input2) {
+		int minNum;
+
+		if (input1 < input2) {
+			minNum = input1;
+		} else {
+			minNum = input2;
+		}
+		return minNum;
+	} //end method
 	
 	/**
 	 * 입력된 두 정수 중에서 큰 수를 찾아 리턴 하는 메소드
@@ -126,6 +154,16 @@ public class VarietyMethods {
 	 * @param input2 : int
 	 * @return int 입력된 두 값 중 큰 정수
 	 */
+	public int max (int input1, int input2) {
+		int maxNum;
+		
+		if (input1 > input2) {
+			maxNum = input1;
+		} else {
+			maxNum = input2;
+		}
+		return maxNum;
+	} //end method
 	
 	/**
 	 * 정수가 저장된 int 배열을 매개변수로 입력박아 그 배열의 각 원소의 합을 구하여 리턴하는 메소드
@@ -134,14 +172,34 @@ public class VarietyMethods {
 	 * @param numbers : int[] (int 배열)
 	 * @return int 배열의 각 원소의 합
 	 */
+	public int sumOfArray (int[] numbers) {
+		int sumNum = 0;
+		
+		for (int idx = 0; idx < numbers.length; idx++) {
+			sumNum += numbers[idx];
+		}
+		return sumNum;
+	} //end method
 	
 	/**
-	 * 정수가 저장된 int 배열을 매개변수로 입력박아 그 배열의 각 원소의 합을 구하여 리턴하는 메소드
+	 * 정수가 저장된 int 배열을 매개변수로 입력박아 그 배열의 각 원소의 평균을 구하여 리턴하는 메소드
 	 * avgOfArray 를 정의하시오
 	 * 
 	 * @param numbers : int[] (int 배열)
 	 * @return double 배열의 각 원소의 평균
 	 */
+	public double avgOfArray (int[] numbers) {
+		int sumNum = 0;
+		double avgNum;
+		int count = 0;
+	
+		for (int idx = 0; idx < numbers.length; idx++) {
+			sumNum += numbers[idx]; 
+			count++;
+		}
+		avgNum = (double)sumNum / count;
+		return avgNum;
+	} //end method
 	
 	/**
 	 * char 타입의 연산자와 두 개의 정수를 매개변수로 입력받아 
@@ -155,4 +213,13 @@ public class VarietyMethods {
 	 *  @param x : int 첫번째 피연산자
 	 *  @param y : int 두번째 피연산자 
 	 */
+	public void adder(char op, int x, int y) {
+		
+		if (op == '+') {
+			System.out.printf("%d + %d = %d", x, y, x + y);
+		} else {
+			System.out.println("입력된 연산자가 +가 아닙니다.");
+		}
+	
+	} // end method
 }
