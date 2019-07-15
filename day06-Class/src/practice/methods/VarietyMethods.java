@@ -190,15 +190,13 @@ public class VarietyMethods {
 	 */
 	public double avgOfArray (int[] numbers) {
 		int sumNum = 0;
-		double avgNum;
 		int count = 0;
 	
 		for (int idx = 0; idx < numbers.length; idx++) {
 			sumNum += numbers[idx]; 
 			count++;
 		}
-		avgNum = (double)sumNum / count;
-		return avgNum;
+		return (double)sumNum / count;
 	} //end method
 	
 	/**
