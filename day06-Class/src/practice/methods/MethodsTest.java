@@ -24,27 +24,36 @@ public class MethodsTest {
 		double cel = methods.fahToCel(100.0);
 		System.out.println("cel = " + cel);
 		
+		// 생일 텍스트 출력 메소드
 		methods.birthYearMonth("임채정", 1997, 4);
 
+		// 입력받은 수의 구구단을 출력하는 메소드
 		methods.printNineNineTable(4);
 
+		// 입력받은 배열의 원소에 해당하는 구구단을 출력하는 메소드
 		methods.printNineNineTableFromArray(inputNum);
 
+		// bmi 결과를 출력하는 메소드
 		printResult = methods.calcBmi(155, 50);
 		System.out.printf("당신의 bmi결과는 %s 입니다.%n", printResult);
 
+		// 두 정수를 입력받아 작은 수를 리턴하는 메소드
 		result = methods.min(10, 6);
 		System.out.printf("두 정수 중 작은 값을 %d 입니다.%n", result);
 
+		// 두 정수를 입력받아 큰 수를 리턴하는 메소드
 		result = methods.max(10,6);
 		System.out.printf("두 정수 중 큰 값을 %d 입니다.%n", result);
 
+		// 배열을 입력받아 원소의 합을 리턴하는 메소드
 		result = methods.sumOfArray(inputNum);
 		System.out.printf("각 원소의 합은 %d 입니다.%n", result);
 
+		// 배열을 입력받아 원소의 평균을 리턴하는 메소드
 		resultDouble = methods.avgOfArray(inputNum);
 		System.out.printf("각 원소의 평균은 %f 입니다.%n", resultDouble);
 
+		// 입력되는 연산자가 + 일때만 연산의 결과가 출력되는 메소드
 		methods.adder('+', 10, 20);
 	}
 

@@ -189,14 +189,21 @@ public class VarietyMethods {
 	 * @return double 배열의 각 원소의 평균
 	 */
 	public double avgOfArray (int[] numbers) {
+		// 1. 배열 원소의 총합
+		// (1) 총합 변수 선언, 초기화
 		int sumNum = 0;
-		int count = 0;
 	
-		for (int idx = 0; idx < numbers.length; idx++) {
-			sumNum += numbers[idx]; 
-			count++;
+		// (3) 배열의 원소의 합을 구함
+		for (int num: numbers) {
+			sumNum += num;
 		}
-		return (double)sumNum / count;
+//		for (int idx = 0; idx < numbers.length; idx++) {
+//			sumNum += numbers[idx]; 
+//			count++;
+//		}
+		
+		// 2. 총합 / 원소의 갯수 ==> 평균
+		return (double)sumNum / numbers.length;
 	} //end method
 	
 	/**
