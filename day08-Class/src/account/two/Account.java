@@ -94,12 +94,15 @@ public class Account {
 	 * 출금 성공 : "~~가 출금되었습니다. 남은 잔액은 얼마입니다" 문자열 리턴
  	 * @param amount
 	 */
-	public void withdraw(int amount) {
+	public String withdraw(int amount) {
+		String result;
+		
 		if (balance < amount) {
-			System.out.println("잔액이 부족합니다.%n");
+			result = "잔액이 부족합니다";
 		} else {
 			balance -= amount;
-			System.out.printf("%d 가 출금되었습니다. 남은 잔액은 %d 입니다.%n", amount, balance);
+			result = amount + "가 출금 되었습니다. 남은 잔액은 " + balance + "입니다.";
 		}
+		return result;
 	}
 }

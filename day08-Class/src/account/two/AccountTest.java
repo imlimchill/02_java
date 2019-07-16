@@ -46,8 +46,11 @@ public class AccountTest {
 		yourAccount.print();
 		
 		// (6) 출금 : 4000원
-		myAccount.deposit(-4000);
-		yourAccount.withdraw(4000);
+		String result = myAccount.withdraw(4000);
+		System.out.println(result);
+		result = yourAccount.withdraw(4000);
+		System.out.println(result);
+		
 		
 		// (7) 출력 : 두 계좌 모두
 		myAccount.print();
