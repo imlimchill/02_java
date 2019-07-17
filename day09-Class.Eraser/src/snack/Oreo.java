@@ -61,7 +61,7 @@ public class Oreo {
 		System.out.println("현재 오레오의 상태");
 		System.out.printf("[크림 = %s]%n", cream);
 		System.out.printf("[반지름 = %4.1f]%n", radius);
-		System.out.printf("[두께 = %4.1f%]n%n", thickness);
+		System.out.printf("[두께 = %4.1f]%n%n", thickness);
 	}
 	
 	/**
