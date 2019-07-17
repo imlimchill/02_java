@@ -102,14 +102,11 @@ public class Eraser {
 	}
 	
 	// 다섯 개 모두 받는다.
-	Eraser(double Width, double Height, double Depth, int Layer, String Color) {
+	Eraser(double width, double height, double depth, int layer, String color) {
 		// alt + shift + a : 세로 편집 모드 토글
 		// alt + shift + r : 같은 변수 같이 편집하기
-		this.width = Width;
-		this.height = Height;
-		this.depth = Depth;
-		this.layer = Layer;
-		this.color = Color;
+		this(width, height, depth, layer);
+		this.color = color;
 	}
 	// 3. 메소드 선언부
 	// (1) 칠판 지우개
