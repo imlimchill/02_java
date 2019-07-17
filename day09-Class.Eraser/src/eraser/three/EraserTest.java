@@ -40,6 +40,8 @@ public class EraserTest {
 		// (6) 두 지우개 상태 출력
 		leftEraser.print();
 		rightEraser.print();
+		
+		// ctrl + 클릭 => 해당 메소드, 생성자로 이동
 	}
 
 }
