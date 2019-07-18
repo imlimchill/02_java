@@ -42,7 +42,7 @@ public class BookShelf {
 	// book 객체의 sequence 가 같으면 같은 책으로 판단, 삭제
 	public void remove(Book book) {
 		// 폐기 안하고 남는 책을 유지할 새 배열 
-		Book[] newBooks;
+		Book[] newBooks = null;
 		
 		// 1. 폐기할 책이 위치하는 인덱스 찾기
 		int index = findBookIndex(book);
