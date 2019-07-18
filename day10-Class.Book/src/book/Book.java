@@ -178,7 +178,7 @@ public class Book {
 		this.quantity = quantity;
 	}
 	
-	// print()
+	// void print() : 책의 정보를 출력하는 메소드
 	public void print() {
 		System.out.printf("일련번호 %d 책의 상태%n", sequence);
 		System.out.printf("ISBN : %s %n", isbn);
@@ -190,12 +190,12 @@ public class Book {
 		System.out.printf("재고수량 : %d %n%n", quantity);
 	}
 	
-	// buy()
+	// void buy(int amount) : amount 만큼 책의 재고를 늘리는 메소드
 	void buy(int amount) {
 		quantity += amount;
 	}
 	
-	// sell()
+	// void sell(int amount) : amount 만큼 재고를 줄이는 메소드
 	void sell(int amount) {
 		quantity -= amount;
 	}
