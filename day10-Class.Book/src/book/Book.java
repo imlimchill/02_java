@@ -71,22 +71,22 @@ public class Book {
 	
 	Book(int sequence) {
 		this();
-		this.sequence = sequence;
+		setSequence(sequence);
 	}
 	
 	Book(int sequence, String isbn) {
 		this(sequence);
-		this.isbn = isbn;
+		setIsbn(isbn);
 	}
 	
 	Book(int sequence, String isbn, String title) {
 		this(sequence, isbn);
-		this.title = title;
+		setTitle(title);
 	}
 	
 	Book(int sequence, String isbn, String title, String author) {
 		this(sequence, isbn, title);
-		this.author = author;
+		setAuthor(author);
 	}
 	
 	Book(int sequence, String isbn, String title, String author, String company) {
