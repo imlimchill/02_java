@@ -190,6 +190,14 @@ public class Book {
 		System.out.printf("재고수량 : %d %n%n", quantity);
 	}
 	
+	// 강사님의 정보출력 메소드
+	public void print2() {
+		String message = "책정보[일련번호:%s ISBN:%s 제목 :%s 저자:%s 출판사:%s 페이지:%d 가격:%d 재고:%d]%n";
+		
+		System.out.printf(message, sequence, isbn, title, author, company, totalPage, price, quantity);
+				
+	}
+	
 	// void buy(int amount) : amount 만큼 책의 재고를 늘리는 메소드
 	void buy(int amount) {
 		quantity += amount;
