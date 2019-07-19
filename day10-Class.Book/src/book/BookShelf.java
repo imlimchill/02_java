@@ -38,6 +38,8 @@ public class BookShelf {
 		this.books = newBooks;
 	}
 	
+	
+	
 	// 책장에서 책을 제거 : void remove(Book book)
 	// book 객체의 sequence 가 같으면 같은 책으로 판단, 삭제
 	public void remove(Book book) {
@@ -53,28 +55,51 @@ public class BookShelf {
 			newBooks = new Book[books.length - 1];
 			
 			// 5. 폐기할 인덱스가 배열 끝일 때 폐기할 인덱스 앞쪽까지만 새 배열 복사
-			if (index == books.length) {
+			if (index == books.length - 1) {
 				for (int idx = 0; idx < newBooks.length; idx++) {
 					newBooks[idx] = books[idx];
 				}
 			} else {
 				// 4. 폐기할 인덱스가 배열 중간일 때 삭제
 				// (1) 삭제할 책 앞쪽의 책 정보는 같은 인덱스로 복사
-				for (int idx = 0; idx < index - 1; idx++) {
+				for (int idx = 0; idx < index; idx++) {
 					newBooks[idx] = books[idx];
 				}
 				// (2) 삭제할 책 뒤쪽의 남는 책 정보는 현재인덱스 -1 으로 복사하기
-				for (int idx = index +1; idx < newBooks.length; idx++) {
+				for (int idx = index; idx < newBooks.length; idx++) {
+					newBooks[idx] = books[idx + 1];
+				}
+			}
+			this.books = newBooks;
+		}
+	}
+		
+	
+	// 강사님 버전
+	public void remove2(Book book) {
+		Book[] newBooks = null;
+
+		int index = findBookIndex(book);
+
+		if (index > -1) {
+			newBooks = new Book[books.length - 1];
+
+			if (index < books.length - 1) {
+				for (int idx = 0; idx < index; idx++) {
+					newBooks[idx] = books[idx];
+				}
+				for (int idx = index; idx < newBooks.length; idx++) {
+					newBooks[idx] = books[idx + 1];
+				}
+			} else {
+				for (int idx = 0; idx < newBooks.length; idx++) {
 					newBooks[idx] = books[idx];
 				}
 			}
+			this.books = newBooks;
 		}
-		
-		
-		// 6. 남는 책이 복사된 새배열을 this.books 에 저장
-		this.books = newBooks;
-		
 	}
+	
 	
 	
 	// 책 정보 수정 : void : set(Book book)
@@ -88,9 +113,21 @@ public class BookShelf {
 	}
 	
 	
-	// 전체 책 목록을 얻기 
+	// 전체 책 목록을 얻기 : getAllBooks() 
+	public Book[] getAllBooks() {
+		return this.books;
+	}
 	
-	// 찾아서 책 리턴
+	
+	/**
+	 * 매개변수 전달된 책 정보와 일치하는 일련번호를 가진 책(책 배열 books에 있는) 을
+	 * 찾아서 배열안에 있는 책을 리턴
+	 * 
+	 * return 을 중간에서 하는건 자바스크립트나 씨에서 하는 방식이고 자바에서는 아래에 하자
+	 * 
+	 * @param book
+	 * @return
+	 */
 	private Book findBook(Book book) {
 		Book findBook = null;
 		for (int idx = 0; idx < books.length; idx++) {
@@ -104,7 +141,11 @@ public class BookShelf {
 		return findBook;
 	}
 	
-	// 찾아서 책의 인덱스 리턴
+	/**
+	 * 찾으려고 하는 책의 인덱스 (책 자체가 아니라 책의 위치)
+	 * @param book
+	 * @return
+	 */
 	private int findBookIndex(Book book) {
 		int index = -1;
 		for (int idx = 0; idx < books.length; idx++) {
