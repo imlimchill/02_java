@@ -34,6 +34,6 @@ public class NamedPoint extends Point {
 	// 앞쪽에 점의 이름을 덧붙이도록 변경
 	@Override
 	public String toString() {
-		return name + " = " + super.toString();
+		return name + " " + super.toString();
 	}
 }
