@@ -9,7 +9,7 @@ public class PointTest2 {
 		// 3. 사용
 		for (Point point: points) {
 			System.out.println(point);
-			// 위의 실행코드는 아래쫏의 point.toString() 을 호출한 내용과 같다.
+			// 위의 실행코드는 아래쪽의 point.toString() 을 호출한 내용과 같다.
 			System.out.println(point.toString());
 			
 			// 그런데 단순 point 를 출력해도 같은 결과를 받는 이유
