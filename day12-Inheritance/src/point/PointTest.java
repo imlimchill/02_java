@@ -33,10 +33,11 @@ public class PointTest {
 		// (2) 점 q 를 출력
 		System.out.println(q);
 		
+		// 점 o 를 출력
+		System.out.println(o);
+		
 		// (3)  두 점 사이의 거리를 계산
 		System.out.printf("두 점사이의 거리 : %5.2f%n", p.distanceFrom(q));
-		
-		System.out.println(o);
 		
 		// 배열 출력
 		System.out.println(points[0]);
