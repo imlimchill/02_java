@@ -12,7 +12,7 @@ public class Employee extends Person {
 	
 	//기본 생성자
 	Employee() {
-		
+		super();
 	}
 	
 	// 매개변수 생성자
