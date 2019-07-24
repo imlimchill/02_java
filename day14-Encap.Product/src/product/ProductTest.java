@@ -1,5 +1,7 @@
 package product;
 
+import point.Point;
+
 /**
  * 
  * @author Administrator
@@ -70,6 +72,13 @@ public class ProductTest {
 		System.out.println("==============================");
 		System.out.println(mouse);
 		System.out.println("==============================");		
+		
+		// 다른 패키지(point) 에 있는 Point 클래스를 사용 : import (ctrl + shift + o)
+		Point point = new Point();
+//		point.x = 200;
+		point.setX(200);
+		point.setY(-11); 
+		System.out.println(point);
 
 	} // end main
 
