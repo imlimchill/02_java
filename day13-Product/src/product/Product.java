@@ -25,6 +25,7 @@ package product;
  *  sell(int amount) : void
  *   ==> 매장에서 판매(출고)되어 재고수량이 amount 만큼 줄어들도록 반영
  *   ==> 재고수량이 0보다 작아질 수 없음
+ *   ==> 판매하려는 수량은 재고보다 클 수 없도록 처리
  *   
  *  buy(int amount) : void 
  *   ==> 매장에 입고되어 재고수량이 amount 만큼 늘어나도록 반영
@@ -132,10 +133,13 @@ public class Product {
 	
 	/**
 	 * 재고 수량에서 amount 만큼 줄어들도록 하는 메소드
+	 * 단, amount 을 빼고 나서 재고 수량이 음수가 되어서는 안된다.
 	 * @param amount
 	 */
 	public void sell(int amount) {
-		quantity -= amount;
+		if (quantity >= amount) {
+			quantity -= amount;
+		}
 	}
 	
 	/**
