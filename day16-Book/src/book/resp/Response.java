@@ -13,5 +13,5 @@ public interface Response {
 	 * 
 	 * @param object
 	 */
-	public abstract void responde(Object object);
+	public abstract void response(Object object);
 }

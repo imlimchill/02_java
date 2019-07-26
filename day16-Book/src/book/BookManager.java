@@ -1,5 +1,6 @@
 package book;
 
+import book.resp.ListResp;
 import book.resp.MessageResp;
 import book.resp.Response;
 
@@ -64,7 +65,7 @@ public class BookManager {
 		} else {
 			message = String.format(book.toString() + "가 이미 존재합니다.");
 		}
-		response.responde(message);
+		response.response(message);
 	}
 	
 	/**
@@ -100,8 +101,9 @@ public class BookManager {
 	 * BookShelf 의 getAllBooks()을 실행한다.
 	 * @return Book[] 로 선언된 배열값
 	 */
-	public Book[] getAllBooks() {
-		return this.bookShelf.getAllBooks();
+	public void getAllBooks() {
+		response = new ListResp();
+		response.response(this.bookShelf.getAllBooks());
 	}
 
 }

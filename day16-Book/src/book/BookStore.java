@@ -69,8 +69,8 @@ public class BookStore {
 	 * BookManager 의 getAllBooks() > BookShelf 의 getAllBooks() 를 실행
 	 * @return Book[] books에 들어있는 배열 모두 리턴
 	 */
-	public Book[] getAllBooks() {
-		return manager.getAllBooks();
+	public void getAllBooks() {
+		manager.getAllBooks();
 	}
 	
 }
